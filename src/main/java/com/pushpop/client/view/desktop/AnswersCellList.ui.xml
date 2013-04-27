@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:pp="urn:import:com.pushpop.client.view.desktop">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	
+		<div id="answers-header">
+			<div class="subheader answers-subheader">
+				<h2 ui:field="totalAnswers">
+					19 Answers
+				</h2>
+				<div id="tabs">
+					<a ui:field="sortBylastActivity" title="Answers with the latest activity first"
+						class="youarehere">active</a>
+					<a ui:field="sortByHistorical" title="Answers in the order they were provided">oldest</a>
+					<a ui:field="sortByScore" title="Answers with the highest score first"
+						href="/questions/3701901/eclipse-does-not-recognize-content-of-persistence-xml?answertab=votes#tab-top">votes</a>
+				</div>
+			</div>
+		</div>
+		<c:CellList ui:field="answersList"></c:CellList>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

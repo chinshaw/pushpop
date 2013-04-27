@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+	so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.1//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.1/distro-source/core/src/gwt-module.dtd">
+<module rename-to='push_pop'>
+
+	<inherits name='com.pushpop.FormFactor' />
+
+	<replace-with class="com.pushpop.client.ClientFactoryDesktop">
+		<when-type-is class="com.pushpop.client.IClientFactory" />
+		<when-property-is name="formfactor" value="desktop" />
+	</replace-with>
+
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.core.Core' />
+	<inherits name="com.google.gwt.http.HTTP" />
+
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.google.gwt.place.Place" />
+	<inherits name="com.google.gwt.activity.Activity" />
+	<inherits name="com.google.gwt.editor.Editor" />
+	
+		
+	<inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+	<inherits name='com.google.web.bindery.autobean.AutoBean' />
+	
+	<inherits name="com.google.gwt.logging.Logging" />
+	<inherits name="com.google.gwt.logging.LogImpl" />
+	
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<set-property name="gwt.logging.logLevel" value="INFO" />
+	<set-property name="gwt.logging.consoleHandler" value="DISABLED" />
+	<set-property name="gwt.logging.developmentModeHandler" value="ENABLED"/>
+	<set-property name="gwt.logging.firebugHandler" value="DISABLED" />
+	<set-property name="gwt.logging.systemHandler" value="ENABLED" />
+	<set-property name="gwt.logging.simpleRemoteHandler" value="DISABLED" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	
+	<set-property name="compiler.stackMode" value="emulated"/>
+  	<set-configuration-property name="compiler.emulatedStack.recordLineNumbers" value="true"/> 
+  	<set-configuration-property name="compiler.emulatedStack.recordFileNames" value="true"/> 
+	
+	
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.pushpop.client.PushPop' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

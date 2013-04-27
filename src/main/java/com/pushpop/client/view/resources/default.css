@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #888888;
+}
+
+.masterLayoutPanel {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.topPanel {
+	
+}
+
+.actionsPanel {
+	
+}
+
+.headerPanel {
+	height: 120px;
+}
+
+.footerPanel {
+	background-color: #777777;
+	color: white;
+}
+
+.contentPanel {
+	min-height: 450px;
+}

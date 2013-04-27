@@ -1,0 +1,232 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.title {
+			opacity: 0.4; 
+			z-index: 1; 
+			position: relative;
+		}
+		
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="ask-mainbar" id="mainbar">
+
+			<div id="question-form">
+				<div style="position: relative;">
+					<div class="form-item ask-title">
+						<table class="ask-title-table">
+							<tbody>
+								<tr>
+									<td class="ask-title-cell-key">
+										<label for="title">Title</label>
+									</td>
+									<td class="ask-title-cell-value">
+										<input type="text" data-max-length="150"
+											data-min-length="15" class="actual-edit-overlay" tabindex="100"
+											maxlength="300" autocomplete="off"
+											style="opacity: 1; position: absolute; background-color: white; color: black; width: 610px; height: 16px; line-height: 16.3667px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;"
+											disabled="disabled" />
+										<g:TextBox maxLength="300" styleName="{style.title} ask-title-field edit-field-overlayed" ui:field="title"/>
+										<span class="edit-field-overlay">what's your programming question? be
+											specific.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="question-suggestions">
+						</div>
+					</div>
+				</div>
+
+				<div class="post-editor" id="post-editor">
+
+					<div style="position: relative;">
+						<div class="wmd-container">
+							<div class="wmd-button-bar" id="wmd-button-bar">
+								<ul id="wmd-button-row" class="wmd-button-row">
+									<li class="wmd-button" style="left: 0px;" id="wmd-bold-button"
+										title="Strong &lt;strong&gt; Ctrl+B">
+										<span style="background-position: 0px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 25px;" id="wmd-italic-button"
+										title="Emphasis &lt;em&gt; Ctrl+I">
+										<span style="background-position: -20px 0px;"></span>
+									</li>
+									<li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li>
+									<li class="wmd-button" style="left: 75px;" id="wmd-link-button"
+										title="Hyperlink &lt;a&gt; Ctrl+L">
+										<span style="background-position: -40px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 100px;" id="wmd-quote-button"
+										title="Blockquote &lt;blockquote&gt; Ctrl+Q">
+										<span style="background-position: -60px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 125px;" id="wmd-code-button"
+										title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K">
+										<span style="background-position: -80px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 150px;" id="wmd-image-button"
+										title="Image &lt;img&gt; Ctrl+G">
+										<span style="background-position: -100px 0px;"></span>
+									</li>
+									<li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li>
+									<li class="wmd-button" style="left: 200px;" id="wmd-olist-button"
+										title="Numbered List &lt;ol&gt; Ctrl+O">
+										<span style="background-position: -120px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 225px;" id="wmd-ulist-button"
+										title="Bulleted List &lt;ul&gt; Ctrl+U">
+										<span style="background-position: -140px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 250px;" id="wmd-heading-button"
+										title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H">
+										<span style="background-position: -160px 0px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 275px;" id="wmd-hr-button"
+										title="Horizontal Rule &lt;hr&gt; Ctrl+R">
+										<span style="background-position: -180px 0px;"></span>
+									</li>
+									<li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li>
+									<li class="wmd-button" style="left: 325px;" id="wmd-undo-button"
+										title="Undo - Ctrl+Z">
+										<span style="background-position: -200px -20px;"></span>
+									</li>
+									<li class="wmd-button" style="left: 350px;" id="wmd-redo-button"
+										title="Redo - Ctrl+Shift+Z">
+										<span style="background-position: -220px -20px;"></span>
+									</li>
+									<li class="wmd-button wmd-help-button" id="wmd-help-button"
+										style="right: 0px;" title="Markdown Editing Help">
+										<span style="background-position: -240px 0px;"></span>
+									</li>
+								</ul>
+							</div>
+							<g:TextArea name="post-text" styleName="wmd-input processed" ui:field="description" >
+								</g:TextArea>
+							<div class="grippie" style="margin-right: 0px;"></div>
+						</div>
+					</div>
+
+					<div style="margin-top: 8px; height:24px;" class="fl">&nbsp;</div>
+					<div style="margin-top: 8px; height:24px; display:none;" class="draft-saved community-option fl"
+						id="draft-saved">draft saved</div>
+
+					<div style="margin-top: 8px; height:24px; display:none;" class="draft-discarded community-option fl"
+						id="draft-discarded">draft discarded</div>
+
+
+
+					<div class="wmd-preview" id="wmd-preview"></div>
+					<div></div>
+					<div class="edit-block">
+						<input type="hidden" value="99991d17c79ea3b0f7c72bd5cc4932c3"
+							name="fkey" id="fkey" />
+						<input type="text" name="author" id="author" />
+					</div>
+				</div>
+
+				<div style="position: relative;">
+
+
+					<div style="position: relative;">
+						<div class="form-item">
+							<label>Tags</label>
+							<input type="text" tabindex="103" value="" size="60" name="tagnames"
+								id="tagnames" style="display: none;" />
+							<div class="actual-edit-overlay"
+								style="width: 666px; height: 28px; opacity: 1; position: absolute; background-color: white; color: black; line-height: 28px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;"
+								disabled="disabled">&nbsp;
+								at least one tag such as (c++ ajax ruby-on-rails), max 5 tags
+							</div>
+							<div class="tag-editor edit-field-overlayed"
+								style="width: 666px; height: 28px; opacity: 0.4; z-index: 1; position: relative;">
+								<span style=""></span>
+								<input type="text" tabindex="103" style="width: 658px;" />
+								<span></span>
+							</div>
+							<span class="edit-field-overlay">
+								at least one tag such as (c++ ajax ruby-on-rails), max 5 tags
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="question-only-section">
+					<div>
+						<h2 class="bottom-notice">
+							Would you like to have responses to your questions
+							<a href="#" id="inbox-notify-1">sent to you via email</a>
+							?
+						</h2>
+					</div>
+
+
+					<div class="form-submit cbt">
+						<g:Button ui:field="submitQuestion">Post Your Question</g:Button>
+						<a class="discard-question dno" href="#">discard</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-item" id="answer-from-ask-form-item">
+				<input type="checkbox" name="answer-from-ask" id="answer-from-ask" />
+				<label style="display: inline;" for="answer-from-ask">Answer your own question</label>
+				&ndash;
+				<a target="_blank"
+					href="http://blog.stackoverflow.com/2011/07/its-ok-to-ask-and-answer-your-own-questions/">share your knowledge, Q&amp;A-style</a>
+			</div>
+			<div class="dno" id="question-answer-section">
+				<div style="margin-bottom: 20px;" id="inline-answer">
+
+
+
+					<div class="post-editor" id="post-editor-42">
+
+						<div style="position: relative;">
+							<div class="wmd-container">
+								<div class="wmd-button-bar" id="wmd-button-bar-42"></div>
+								<textarea data-min-length="" tabindex="103" rows="15"
+									cols="92" name="post-text-answer" class="wmd-input" id="wmd-input-42"></textarea>
+							</div>
+						</div>
+
+						<div style="margin-top: 8px; height:24px;" class="fl">&nbsp;</div>
+						<div style="margin-top: 8px; height:24px; display:none;"
+							class="draft-saved community-option fl" id="draft-saved-42">draft saved</div>
+
+						<div style="margin-top: 8px; height:24px; display:none;"
+							class="draft-discarded community-option fl" id="draft-discarded-42">draft discarded</div>
+
+						<div class="community-option">
+							<input type="checkbox" name="communitymode" id="communitymode-42" />
+							<label
+								title="Marking an answer community wiki encourages others to edit it by lowering the reputation barrier required to edit. However, you will not gain any upvote reputation from it. This cannot be undone."
+								for="communitymode-42">community wiki</label>
+						</div>
+
+
+						<div class="wmd-preview" id="wmd-preview-42"></div>
+						<div></div>
+					</div>
+				</div>
+
+				<div>
+					<h2 class="bottom-notice">
+						Would you like to have responses to your questions
+						<a href="#" id="inbox-notify-2">sent to you via email</a>
+						?
+					</h2>
+				</div>
+
+				<div class="form-submit cbt">
+					<input type="submit" tabindex="120" value="Post Your Question And Answer"
+						id="submit-button-42" />
+					<a class="discard-question dno" href="#">discard</a>
+				</div>
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 
