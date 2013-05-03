@@ -22,18 +22,13 @@ public class QuestionView extends DesktopView implements IQuestionView {
     interface ViewBinder extends UiBinder<Widget, QuestionView> {
     }
     
-<<<<<<< HEAD
     private static ViewBinder uiBinder = GWT.create(ViewBinder.class);
     
     public QuestionView(EventBus eventBus, Resources resources) {
         super(eventBus, resources);
         initWidget(uiBinder.createAndBindUi(this));
-=======
-    public QuestionView(EventBus eventBus, Resources resources) {
-        super(eventBus, resources);
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
     }
-
+        
     @Override
     public void reset() {
         // TODO Auto-generated method stub

@@ -5,7 +5,6 @@
 
 package com.pushpop.server;
 
-<<<<<<< HEAD
 import java.net.URL;
 import java.util.Hashtable;
 import java.util.logging.Logger;
@@ -15,12 +14,9 @@ import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 
-import com.pushpop.server.utils.ServerProperties;
-=======
-import javax.naming.NamingException;
-
+import com.pushpop.server.IAuthenticationProvider;
 import com.pushpop.server.utils.LdapQuery;
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
+import com.pushpop.server.utils.ServerProperties;
 import com.pushpop.shared.AuthenticationException;
 import com.pushpop.shared.AuthenticationProviderException;
 import com.pushpop.shared.NotImplementedException;
@@ -32,7 +28,6 @@ import com.pushpop.shared.NotImplementedException;
  * @author chinshaw
  */
 public class LdapAuthenticationProvider implements IAuthenticationProvider {
-<<<<<<< HEAD
 
     private static Hashtable<String, Object> env = new Hashtable<String, Object>();
 
@@ -68,18 +63,6 @@ public class LdapAuthenticationProvider implements IAuthenticationProvider {
         env.put(Context.SECURITY_AUTHENTICATION, "none");
     }
 
-    @Override
-    public String getCommonName(String token) throws AuthenticationProviderException {
-        /*
-         * String fullName = null; try { fullName =
-         * LdapQuery.getFullName(token); } catch (NamingException e) { throw new
-         * AuthenticationProviderException("Unable to retrieve common name ",
-         * e); }
-         */
-        String fullName = "guest";
-=======
-    // private static final Logger logger =
-    // Logger.getLogger(SecurityImpl.class.getName());
 
     @Override
     public String getCommonName(String token) throws AuthenticationProviderException {
@@ -89,7 +72,6 @@ public class LdapAuthenticationProvider implements IAuthenticationProvider {
         } catch (NamingException e) {
             throw new AuthenticationProviderException("Unable to retrieve common name ", e);
         }
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
         return fullName;
     }
 
@@ -101,7 +83,7 @@ public class LdapAuthenticationProvider implements IAuthenticationProvider {
         return null;
     }
 
-<<<<<<< HEAD
+    
     /**
      * This will bind to the ldap server url that is configured in the
      * Configuration.properties file server using simple email/password
@@ -142,23 +124,7 @@ public class LdapAuthenticationProvider implements IAuthenticationProvider {
         }
         
         return username;
-=======
-    @Override
-    public String authenticate(String email, String password) throws AuthenticationException {
-        if (email == null) {
-            throw new AuthenticationException("Must supply a valid HP email address");
-        }
-        
-        try {
-            LdapQuery.authenticate(email, password);
-        } catch (javax.naming.AuthenticationException authException) {
-            throw new AuthenticationException("Unable to authenticate user " + email);
-        } catch (NamingException e) {
-            throw new AuthenticationException("LDAP Naming exception occurred while communicating with ldap.hp.com", e);
-        }
-        return email;
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
-    }
+	}
 
     @Override
     public void logout(String token) {

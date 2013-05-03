@@ -7,10 +7,7 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.pushpop.client.IClientFactory;
 import com.pushpop.client.activity.AskQuestionActivity;
 import com.pushpop.client.activity.AuthenticationActivity;
-<<<<<<< HEAD
 import com.pushpop.client.activity.QuestionActivity;
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 import com.pushpop.client.activity.QuestionsActivity;
 
 public class ContentActivityMapper implements ActivityMapper {
@@ -23,23 +20,16 @@ public class ContentActivityMapper implements ActivityMapper {
 
     @Override
     public Activity getActivity(Place place) {
-<<<<<<< HEAD
-        
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
         if (place instanceof RequiresAuthentication) {
             if (clientFactory.getCurrentPerson() == null) {
                 return new AuthenticationActivity(new AuthenticationPlace(place), clientFactory, clientFactory.getAuthenticationView(), place);
             }
         }
         
-<<<<<<< HEAD
         if (place instanceof QuestionPlace) {
             return new QuestionActivity( (QuestionPlace) place, clientFactory, clientFactory.getQuestionView());
         }
-        
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
+
         if (place instanceof QuestionsPlace) {
             return new QuestionsActivity((QuestionsPlace) place, clientFactory, clientFactory.getQuestionsView());
         }

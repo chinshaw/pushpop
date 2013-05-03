@@ -17,20 +17,14 @@ import com.pushpop.client.service.PermissionsRequestFactory;
 import com.pushpop.client.view.IAskQuestionView;
 import com.pushpop.client.view.IAuthenticationView;
 import com.pushpop.client.view.IHeaderView;
-<<<<<<< HEAD
 import com.pushpop.client.view.IQuestionView;
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 import com.pushpop.client.view.IQuestionsView;
 import com.pushpop.client.view.IUsersView;
 import com.pushpop.client.view.desktop.AskQuestionView;
 import com.pushpop.client.view.desktop.AuthenticationView;
 import com.pushpop.client.view.desktop.HeaderView;
 import com.pushpop.client.view.desktop.MasterLayoutPanel;
-<<<<<<< HEAD
 import com.pushpop.client.view.desktop.QuestionView;
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 import com.pushpop.client.view.desktop.QuestionsView;
 import com.pushpop.client.view.resources.Resources;
 import com.pushpop.client.view.resources.ResourcesFactory;
@@ -64,12 +58,8 @@ public class ClientFactoryDesktop implements IClientFactory {
     
     private IAuthenticationView authenticationView = new AuthenticationView(eventBus, resources);
     
-<<<<<<< HEAD
     private IQuestionView questionView = new QuestionView(eventBus, resources);
     
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
-
     public ClientFactoryDesktop() {
         DefaultRequestTransport daoTransport = new DefaultRequestTransport();
         daoTransport.setRequestUrl("/pushpop/dao");
@@ -154,13 +144,9 @@ public class ClientFactoryDesktop implements IClientFactory {
     public PermissionsRequestFactory permissionsRequestFactory() {
         return permissionsRequestFactory;
     }
-
-<<<<<<< HEAD
     @Override
     public IQuestionView getQuestionView() {
         return questionView;
     }
 
-=======
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 }

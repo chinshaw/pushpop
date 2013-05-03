@@ -1,9 +1,5 @@
 package com.pushpop.server.service;
 
-<<<<<<< HEAD
-=======
-import com.pushpop.client.proxy.PersonProxy;
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 import com.pushpop.server.ISecurity;
 import com.pushpop.server.SecurityFactory;
 import com.pushpop.server.domain.Person;
@@ -24,11 +20,7 @@ public class AuthenticationService {
         }
         return person; 
     }
-    
-<<<<<<< HEAD
-=======
-    
->>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
+
     public static final String isAuthenticated() {
         return securityProvider.getSessionId();
     }
