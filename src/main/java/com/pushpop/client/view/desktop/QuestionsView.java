@@ -18,10 +18,18 @@ import com.pushpop.client.view.resources.Resources;
 
 public class QuestionsView extends DesktopView implements IQuestionsView {
 
+<<<<<<< HEAD
+
+    interface QuestionsViewUiBinder extends UiBinder<Widget, QuestionsView> {
+    }
+    
+    private static QuestionsViewUiBinder uiBinder = GWT.create(QuestionsViewUiBinder.class);
+=======
     private static QuestionsViewUiBinder uiBinder = GWT.create(QuestionsViewUiBinder.class);
 
     interface QuestionsViewUiBinder extends UiBinder<Widget, QuestionsView> {
     }
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 
     @UiField(provided = true)
     CellList<QuestionProxy> questionsMiniList;

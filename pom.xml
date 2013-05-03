@@ -30,8 +30,15 @@
 			<id>plugins</id>
 			<url>http://gwtquery-plugins.googlecode.com/svn/mavenrepo</url>
 		</repository>
+<<<<<<< HEAD
 	</repositories>
 
+=======
+
+	</repositories>
+
+
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 	<pluginRepositories>
 		<pluginRepository>
 			<id>DataNucleus_2</id>
@@ -302,7 +309,11 @@
 				<version>3.2.0-release</version>
 				<configuration>
 					<api>JPA</api>
+<<<<<<< HEAD
+					<persistenceUnitName>datanucleus-pu</persistenceUnitName>
+=======
 					<persistenceUnitName>datanucleus-test-pu</persistenceUnitName>
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 					<log4jConfiguration>${basedir}/log4j.properties</log4jConfiguration>
 					<verbose>true</verbose>
 				</configuration>
@@ -360,6 +371,14 @@
 					</execution>
 				</executions>
 			</plugin>
+<<<<<<< HEAD
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+			</plugin>
+=======
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 		</plugins>
 
 		<!-- Required by m2e for import into eclipse. No effect on command line 

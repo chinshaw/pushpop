@@ -21,11 +21,6 @@
 		<servlet-class>com.pushpop.server.PushPopRequestFactoryServlet</servlet-class>
 	</servlet>
 	
-	<servlet>
-		<servlet-name>requestFactoryServlet</servlet-name>
-		<servlet-class>com.pushpop.server.PushPopRequestFactoryServlet</servlet-class>
-	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>requestFactoryServlet</servlet-name>
 		<url-pattern>/dao</url-pattern>

@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+<<<<<<< HEAD
+.masterLayoutPanel {
+	width:100%;
+=======
 body {
 	margin: 0;
 	padding: 0;
@@ -9,6 +13,7 @@ body {
 .masterLayoutPanel {
 	width: 960px;
 	margin: 0 auto;
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 }
 
 .topPanel {
@@ -20,7 +25,13 @@ body {
 }
 
 .headerPanel {
+<<<<<<< HEAD
+    height: 120px;
+    margin: 0 auto;
+    width: 960px;
+=======
 	height: 120px;
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 }
 
 .footerPanel {
@@ -29,5 +40,10 @@ body {
 }
 
 .contentPanel {
+<<<<<<< HEAD
+	margin: 0 auto;
+	width: 960px;
+=======
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 	min-height: 450px;
 }

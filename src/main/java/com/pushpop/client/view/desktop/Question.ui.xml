@@ -3,6 +3,343 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		.title {
+<<<<<<< HEAD
+			opacity: 0.4;
+			z-index: 1;
+			position: relative;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div id="content">
+			<div id="question-header">
+				<h1 itemprop="name">
+					<a class="question-hyperlink"
+						href="/questions/16254562/persist-data-for-10-entities-takes-12-sec">Persist data for 10 entities takes 12 sec</a>
+				</h1>
+			</div>
+
+			<div id="mainbar">
+				<div id="question" data-questionid="16254562" class="question">
+					<table>
+						<tbody>
+							<tr>
+								<td class="votecell">
+									<div class="vote">
+										<input type="hidden" value="16254562" />
+										<a
+											title="This question shows research effort; it is useful and clear (click again to undo)"
+											class="vote-up-off">up vote</a>
+										<span class="vote-count-post ">0</span>
+										<a
+											title="This question does not show any research effort; it is unclear or not useful (click again to undo)"
+											class="vote-down-off">down vote</a>
+
+										<a title="This is a favorite question (click again to undo)"
+											href="#" class="star-off">favorite</a>
+										<div class="favoritecount">
+											<b></b>
+										</div>
+									</div>
+
+								</td>
+
+								<td class="postcell">
+									<div>
+										<div itemprop="description" class="post-text">
+											<p>
+												Im using eclipse link with derby DB or MaxDB,when I did
+												performace testing to persist data for 10 entities with 1000
+												record each this take 12.9 sec ,my code take 0.9 and the
+												<strong>commit</strong>
+												of the entity manager using JPA takes about 12 sec .
+											</p>
+
+											<p>1.is it OK that for 10,000 records the time will be 12
+												secondes?</p>
+
+											<p>2.I read that there is option use </p>
+
+											<pre class="lang-java prettyprint prettyprinted" style="">
+												<code>
+													<span class="pun">&lt;</span>
+													<span class="pln">property name</span>
+													<span class="pun">=</span>
+													<span class="str">"eclipselink.jdbc.batch-writing"</span>
+													<span class="pln"> value</span>
+													<span class="pun">=</span>
+													<span class="str">"JDBC"</span>
+													<span class="pln">
+													</span>
+													<span class="pun">/&gt;</span>
+												</code>
+											</pre>
+
+											<p>what is the drawback of using it?how the logging is work?</p>
+
+											<p>3.what about using Thread for the commit is it OK?</p>
+
+										</div>
+										<div class="post-taglist">
+											<a rel="tag" title="show questions tagged 'java'" class="post-tag"
+												href="/questions/tagged/java">java</a>
+											<a rel="tag" title="" class="post-tag"
+												href="/questions/tagged/multithreading">multithreading</a>
+											<a rel="tag" title="show questions tagged 'jpa'" class="post-tag"
+												href="/questions/tagged/jpa">jpa</a>
+											<a rel="tag" title="" class="post-tag" href="/questions/tagged/eclipselink">eclipselink</a>
+										</div>
+										<table class="fw">
+											<tbody>
+												<tr>
+													<td class="vt">
+														<div class="post-menu">
+															<a id="link-post-16254562" class="short-link"
+																title="short permalink to this question" href="/q/16254562/1342154">share</a>
+															<span class="lsep">|</span>
+															<a title="revise and improve this post" class="suggest-edit-post"
+																href="/posts/16254562/edit">edit</a>
+															<span class="lsep">|</span>
+															<a title="edit tags on this post" class="retag-question"
+																href="/posts/16254562/edit?tagsonly=true">retag</a>
+															<span class="lsep">|</span>
+															<a
+																title="flag this post for serious problems or moderator attention"
+																href="#" id="flag-post-16254562">flag</a>
+														</div>
+													</td>
+													<td class="post-signature owner">
+
+														<div class="user-info ">
+															<div class="user-action-time">
+																asked
+																<span class="relativetime" title="2013-04-27 16:43:43Z">13 mins ago</span>
+															</div>
+															<div class="user-gravatar32">
+																<a href="/users/2327232/ben-hendo">
+																	<div class="">
+																		<img width="32" height="32" alt=""
+																			src="http://www.gravatar.com/avatar/fca27070f4dedc9d84725d9645272630?s=32&amp;d=identicon&amp;r=PG" />
+																	</div>
+																</a>
+															</div>
+															<div class="user-details">
+																<a href="/users/2327232/ben-hendo">Ben Hendo</a>
+																<br />
+																<span dir="ltr" title="reputation score" class="reputation-score">1</span>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="votecell"></td>
+								<td>
+									<div class="comments dno" id="comments-16254562">
+										<table>
+											<tbody>
+												<tr>
+													<td></td>
+													<td></td>
+												</tr>
+
+											</tbody>
+											<tfoot>
+												<tr>
+													<td></td>
+													<td class="comment-form">
+														<form id="add-comment-16254562"></form>
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									<a title="ask author for clarification about this post"
+										data-comments-count="0" class="comments-link" id="comments-link-16254562">add comment</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+				<div class="no-answers" id="answers">
+
+					<a name="tab-top"></a>
+					<div id="answers-header">
+						<div id="new-answer-activity">1 new answer to this question</div>
+						<div class="subheader answers-subheader">
+							<h2>
+							</h2>
+							<div style="display:none;" id="tabs">
+								<a title="Answers with the latest activity first"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=active#tab-top"
+									class="youarehere">active</a>
+								<a title="Answers in the order they were provided"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=oldest#tab-top">oldest</a>
+								<a title="Answers with the highest score first"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=votes#tab-top">votes</a>
+
+							</div>
+						</div>
+					</div>
+
+					<a name="new-answer"></a>
+					<form class="post-form" method="post"
+						action="/questions/16254562/answer/submit" id="post-form">
+						<input type="hidden" value="16254562" id="post-id" />
+						<h2 class="space">Your Answer</h2>
+
+
+
+
+						<script type="text/javascript">
+							StackExchange.ready(function() {
+							initTagRenderer("".split(" "), "".split(" "));
+
+							prepareEditor({
+							heartbeatType: 'answer',
+							bindNavPrevention: true,
+							postfix: "",
+							onDemand: false,
+							discardSelector: ".discard-answer"
+
+							});
+
+
+							});
+						</script>
+
+
+						<div class="post-editor" id="post-editor">
+
+							<div style="position: relative;">
+								<div class="wmd-container">
+									<div class="wmd-button-bar" id="wmd-button-bar">
+										<ul id="wmd-button-row" class="wmd-button-row">
+											<li class="wmd-button" style="left: 0px;" id="wmd-bold-button"
+												title="Strong &lt;strong&gt; Ctrl+B">
+												<span style="background-position: 0px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 25px;" id="wmd-italic-button"
+												title="Emphasis &lt;em&gt; Ctrl+I">
+												<span style="background-position: -20px 0px;"></span>
+											</li>
+											<li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li>
+											<li class="wmd-button" style="left: 75px;" id="wmd-link-button"
+												title="Hyperlink &lt;a&gt; Ctrl+L">
+												<span style="background-position: -40px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 100px;" id="wmd-quote-button"
+												title="Blockquote &lt;blockquote&gt; Ctrl+Q">
+												<span style="background-position: -60px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 125px;" id="wmd-code-button"
+												title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K">
+												<span style="background-position: -80px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 150px;" id="wmd-image-button"
+												title="Image &lt;img&gt; Ctrl+G">
+												<span style="background-position: -100px 0px;"></span>
+											</li>
+											<li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li>
+											<li class="wmd-button" style="left: 200px;" id="wmd-olist-button"
+												title="Numbered List &lt;ol&gt; Ctrl+O">
+												<span style="background-position: -120px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 225px;" id="wmd-ulist-button"
+												title="Bulleted List &lt;ul&gt; Ctrl+U">
+												<span style="background-position: -140px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 250px;" id="wmd-heading-button"
+												title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H">
+												<span style="background-position: -160px 0px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 275px;" id="wmd-hr-button"
+												title="Horizontal Rule &lt;hr&gt; Ctrl+R">
+												<span style="background-position: -180px 0px;"></span>
+											</li>
+											<li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li>
+											<li class="wmd-button" style="left: 325px;" id="wmd-undo-button"
+												title="Undo - Ctrl+Z">
+												<span style="background-position: -200px -20px;"></span>
+											</li>
+											<li class="wmd-button" style="left: 350px;" id="wmd-redo-button"
+												title="Redo - Ctrl+Shift+Z">
+												<span style="background-position: -220px -20px;"></span>
+											</li>
+											<li class="wmd-button wmd-help-button" id="wmd-help-button"
+												style="right: 0px;" title="Markdown Editing Help">
+												<span style="background-position: -240px 0px;"></span>
+											</li>
+										</ul>
+									</div>
+									<textarea data-min-length="" tabindex="101" rows="15"
+										cols="92" name="post-text" class="wmd-input processed" id="wmd-input"></textarea>
+									<div class="grippie" style="margin-right: 0px;"></div>
+								</div>
+							</div>
+
+							<div style="margin-top: 8px; height:24px;" class="fl">&nbsp;</div>
+							<div style="margin-top: 8px; height:24px; display:none;"
+								class="draft-saved community-option fl" id="draft-saved">draft saved</div>
+
+							<div style="margin-top: 8px; height:24px; display:none;"
+								class="draft-discarded community-option fl" id="draft-discarded">draft discarded</div>
+
+							<div class="community-option">
+								<input type="checkbox" name="communitymode" id="communitymode" />
+								<label
+									title="Marking an answer community wiki encourages others to edit it by lowering the reputation barrier required to edit. However, you will not gain any upvote reputation from it. This cannot be undone."
+									for="communitymode">community wiki</label>
+							</div>
+
+
+							<div class="wmd-preview" id="wmd-preview"></div>
+							<div></div>
+							<div class="edit-block">
+								<input type="hidden" value="36876b2237567b35ed72e1dfa011ef68"
+									name="fkey" id="fkey" />
+								<input type="text" name="author" id="author" />
+							</div>
+						</div>
+						<div style="position: relative;">
+						</div>
+
+						<div class="form-submit cbt">
+							<input type="submit" tabindex="110" value="Post Your Answer"
+								id="submit-button" />
+							<a class="discard-answer dno" href="#">discard</a>
+						</div>
+					</form>
+
+
+
+					<h2 class="bottom-notice">
+						Browse other questions tagged
+						<a rel="tag" title="show questions tagged 'java'" class="post-tag"
+							href="/questions/tagged/java">java</a>
+						<a rel="tag" title="show questions tagged 'multithreading'"
+							class="post-tag" href="/questions/tagged/multithreading">multithreading</a>
+						<a rel="tag" title="show questions tagged 'jpa'" class="post-tag"
+							href="/questions/tagged/jpa">jpa</a>
+						<a rel="tag" title="show questions tagged 'eclipselink'" class="post-tag"
+							href="/questions/tagged/eclipselink">eclipselink</a>
+						or
+						<a href="/questions/ask">ask your own question</a>
+						.
+					</h2>
+				</div>
+			</div>
+		</div>
+
+
+=======
 			opacity: 0.4; 
 			z-index: 1; 
 			position: relative;
@@ -228,5 +565,6 @@
 			</div>
 		</div>
 
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 	</g:HTMLPanel>
 </ui:UiBinder> 

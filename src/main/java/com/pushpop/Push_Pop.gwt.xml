@@ -9,7 +9,10 @@
 
 	<replace-with class="com.pushpop.client.ClientFactoryDesktop">
 		<when-type-is class="com.pushpop.client.IClientFactory" />
+<<<<<<< HEAD
+=======
 		<when-property-is name="formfactor" value="desktop" />
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
 	</replace-with>
 
 	<!-- Inherit the core Web Toolkit stuff. -->

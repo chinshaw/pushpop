@@ -15,7 +15,6 @@ import com.pushpop.client.view.desktop.MasterLayoutPanel;
 import com.pushpop.client.view.resources.ResourcesFactory;
 
 public class PushPop implements EntryPoint {
-
     private IClientFactory clientFactory;
 
     private MasterLayoutPanel masterLayoutPanel;
@@ -40,7 +39,7 @@ public class PushPop implements EntryPoint {
         // if there is a valid user.
         checkForValidSession();
     }
-
+    
     private void checkForValidSession() {
         clientFactory.permissionsRequestFactory().createAuthenticationRequest().getCurrentPersionFromSession().fire(new Receiver<PersonProxy>() {
 

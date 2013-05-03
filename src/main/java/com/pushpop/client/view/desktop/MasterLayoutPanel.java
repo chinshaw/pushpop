@@ -27,6 +27,10 @@ public class MasterLayoutPanel extends Composite {
         
         headerPanel.setStyleName(resources.style().headerPanel());
         contentPanel.setStyleName(resources.style().contentPanel());
+<<<<<<< HEAD
+        contentPanel.addStyleName("container");
+=======
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
        // footerPanel.setStyleName(resources.style().footerPanel());
 
         dockPanel.addNorth(headerPanel, 120);

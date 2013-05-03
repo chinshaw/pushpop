@@ -14,6 +14,10 @@ public class PlaceUtils {
             String[] nameAndValue = parameterPairs[i].split("=");
             parameterMap.put(nameAndValue[0], nameAndValue[1]);
         }
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 9629e6d9c7b32e65882d3bcb6996414b8ba5ea22
         return parameterMap;
     }
 }
