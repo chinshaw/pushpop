@@ -1,0 +1,229 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:ppw="urn:import:com.pushpop.client.view.widgets">
+	
+	<ui:style>
+		.title {
+			opacity: 0.4;
+			z-index: 1;
+			position: relative;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<div id="content">
+			<div id="question-header">
+				<h1 itemprop="name">
+					<a class="question-hyperlink" ui:field="questionTitle"></a>
+				</h1>
+			</div>
+
+			<div id="mainbar">
+				<div id="question" data-questionid="16254562" class="question">
+					<table>
+						<tbody>
+							<tr>
+								<td class="votecell">
+									<div class="vote">
+										<input type="hidden" value="16254562" />
+										<a
+											title="This question shows research effort; it is useful and clear (click again to undo)"
+											class="vote-up-off">up vote</a>
+										<span class="vote-count-post ">0</span>
+										<a
+											title="This question does not show any research effort; it is unclear or not useful (click again to undo)"
+											class="vote-down-off">down vote</a>
+
+										<a title="This is a favorite question (click again to undo)"
+											href="#" class="star-off">favorite</a>
+										<div class="favoritecount">
+											<b></b>
+										</div>
+									</div>
+
+								</td>
+
+								<td class="postcell">
+									<div>
+									    <ppw:WikiTextViewer styleName="post-text" ui:field="questionDescription"></ppw:WikiTextViewer>
+									    
+										<div class="post-taglist">
+											<a rel="tag" title="show questions tagged 'java'" class="post-tag"
+												href="/questions/tagged/java">java</a>
+											<a rel="tag" title="" class="post-tag"
+												href="/questions/tagged/multithreading">multithreading</a>
+											<a rel="tag" title="show questions tagged 'jpa'" class="post-tag"
+												href="/questions/tagged/jpa">jpa</a>
+											<a rel="tag" title="" class="post-tag" href="/questions/tagged/eclipselink">eclipselink</a>
+										</div>
+										<table class="fw">
+											<tbody>
+												<tr>
+													<td class="vt">
+														<div class="post-menu">
+															<a id="link-post-16254562" class="short-link"
+																title="short permalink to this question" href="/q/16254562/1342154">share</a>
+															<span class="lsep">|</span>
+															<a title="revise and improve this post" class="suggest-edit-post"
+																href="/posts/16254562/edit">edit</a>
+															<span class="lsep">|</span>
+															<a title="edit tags on this post" class="retag-question"
+																href="/posts/16254562/edit?tagsonly=true">retag</a>
+															<span class="lsep">|</span>
+															<a
+																title="flag this post for serious problems or moderator attention"
+																href="#" id="flag-post-16254562">flag</a>
+														</div>
+													</td>
+													<td class="post-signature owner">
+
+														<div class="user-info ">
+															<div class="user-action-time">
+																asked
+																<span class="relativetime" title="2013-04-27 16:43:43Z">13 mins ago</span>
+															</div>
+															<div class="user-gravatar32">
+																<a href="/users/2327232/ben-hendo">
+																	<div class="">
+																		<img width="32" height="32" alt=""
+																			src="http://www.gravatar.com/avatar/fca27070f4dedc9d84725d9645272630?s=32&amp;d=identicon&amp;r=PG" />
+																	</div>
+																</a>
+															</div>
+															<div class="user-details">
+																<a href="/users/2327232/ben-hendo">Ben Hendo</a>
+																<br />
+																<span dir="ltr" title="reputation score" class="reputation-score">1</span>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="votecell"></td>
+								<td>
+									<div class="comments dno" id="comments-16254562">
+										<table>
+											<tbody>
+												<tr>
+													<td></td>
+													<td></td>
+												</tr>
+
+											</tbody>
+											<tfoot>
+												<tr>
+													<td></td>
+													<td class="comment-form">
+														<form id="add-comment-16254562"></form>
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									<a title="ask author for clarification about this post"
+										data-comments-count="0" class="comments-link" id="comments-link-16254562">add comment</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+				<div class="no-answers" id="answers">
+
+					<a name="tab-top"></a>
+					<div id="answers-header">
+						<div id="new-answer-activity">1 new answer to this question</div>
+						<div class="subheader answers-subheader">
+							<h2>
+							</h2>
+							<div style="display:none;" id="tabs">
+								<a title="Answers with the latest activity first"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=active#tab-top"
+									class="youarehere">active</a>
+								<a title="Answers in the order they were provided"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=oldest#tab-top">oldest</a>
+								<a title="Answers with the highest score first"
+									href="/questions/16254562/persist-data-for-10-entities-takes-12-sec?answertab=votes#tab-top">votes</a>
+
+							</div>
+						</div>
+					</div>
+
+					<a name="new-answer"></a>
+					<form class="post-form" method="post"
+						action="/questions/16254562/answer/submit" id="post-form">
+						<input type="hidden" value="16254562" id="post-id" />
+						<h2 class="space">Your Answer</h2>
+
+
+
+
+						<div class="post-editor" id="post-editor">
+
+							<div style="position: relative;">
+								<div class="wmd-container">
+									<ppw:WikiEditor ui:field="answerEditor" />
+								</div>
+							</div>
+
+							<div style="margin-top: 8px; height:24px;" class="fl">&nbsp;</div>
+							<div style="margin-top: 8px; height:24px; display:none;"
+								class="draft-saved community-option fl" id="draft-saved">draft saved</div>
+
+							<div style="margin-top: 8px; height:24px; display:none;"
+								class="draft-discarded community-option fl" id="draft-discarded">draft discarded</div>
+
+							<div class="community-option">
+								<input type="checkbox" name="communitymode" id="communitymode" />
+								<label
+									title="Marking an answer community wiki encourages others to edit it by lowering the reputation barrier required to edit. However, you will not gain any upvote reputation from it. This cannot be undone."
+									for="communitymode">community wiki</label>
+							</div>
+
+
+							<div class="wmd-preview" id="wmd-preview"></div>
+							<div></div>
+							<div class="edit-block">
+								<input type="hidden" value="36876b2237567b35ed72e1dfa011ef68"
+									name="fkey" id="fkey" />
+								<input type="text" name="author" id="author" />
+							</div>
+						</div>
+						<div style="position: relative;">
+						</div>
+
+						<div class="form-submit cbt">
+							<input type="submit" tabindex="110" value="Post Your Answer"
+								id="submit-button" />
+							<a class="discard-answer dno" href="#">discard</a>
+						</div>
+					</form>
+
+					<h2 class="bottom-notice">
+						Browse other questions tagged
+						<a rel="tag" title="show questions tagged 'java'" class="post-tag"
+							href="/questions/tagged/java">java</a>
+						<a rel="tag" title="show questions tagged 'multithreading'"
+							class="post-tag" href="/questions/tagged/multithreading">multithreading</a>
+						<a rel="tag" title="show questions tagged 'jpa'" class="post-tag"
+							href="/questions/tagged/jpa">jpa</a>
+						<a rel="tag" title="show questions tagged 'eclipselink'" class="post-tag"
+							href="/questions/tagged/eclipselink">eclipselink</a>
+						or
+						<a href="/questions/ask">ask your own question</a>
+						.
+					</h2>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,100 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<div id="topbar">
+			<div id="hlinks">
+				<span id="hlinks-user">
+					<span ui:field="viewProfile" class="profile-triangle">▼</span>
+					<g:Anchor styleName="profile-link" ui:field="profileLink">
+					log in</g:Anchor>
+					&nbsp;
+					<a href="/users/1342154/chris-hinshaw?tab=reputation">
+						<span dir="ltr" title="your reputation; view reputation changes"
+							class="reputation-score" ui:field="reputationScore">0</span>
+					</a>
+					<span title="0 gold badges">
+						<span class="badge1"></span>
+						<span class="badgecount" ui:field="goldBadgeCount">0</span>
+					</span>
+					<span title="0 silver badge">
+						<span class="badge2"></span>
+						<span class="badgecount" ui:field="silverBadgeCount">0</span>
+					</span>
+					<span title="0 bronze badges">
+						<span class="badge3"></span>
+						<span class="badgecount" ui:field="bronzeBadgeCount">0</span>
+					</span>
+					<span class="lsep">|</span>
+
+				</span>
+				<span id="hlinks-nav">
+					<a href="/review/">review</a>
+
+					<span class="lsep">|</span>
+				</span>
+				<span id="hlinks-custom">
+					<a href="http://chat.stackoverflow.com">chat</a>
+
+					<span class="lsep">|</span>
+					<a href="http://meta.stackoverflow.com">meta</a>
+
+					<span class="lsep">|</span>
+					<a href="/about">about</a>
+
+					<span class="lsep">|</span>
+					<a href="/faq">faq</a>
+				</span>
+			</div>
+			<div id="hsearch">
+				<form autocomplete="off" method="get" action="/search" id="search">
+					<div>
+						<input type="text" value="" size="28" maxlength="240"
+							tabindex="1" placeholder="search" class="textbox" name="q"
+							autocomplete="off" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="hlogo">
+			<a href="/">
+				Stack Overflow
+			</a>
+		</div>
+
+		<div id="hmenus">
+			<div class="nav mainnavs">
+				<ul>
+					<li>
+						<a href="#QuestionsPlace:">Questions</a>
+					</li>
+					<li>
+						<a href="#TagsPlace:">Tags</a>
+					</li>
+					<li class="youarehere">
+						<a href="#UsersPlace:" id="nav-users">Users</a>
+					</li>
+					<li>
+						<a href="#BadgesPlace:">Badges</a>
+					</li>
+					<li>
+						<a href="#UnansweredPlace:">Unanswered</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav askquestion">
+				<ul>
+					<li>
+						<a href="#AskQuestionPlace:">Ask Question</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
