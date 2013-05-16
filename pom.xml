@@ -243,8 +243,6 @@
 
 		<plugins>
 
-
-
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.4</version>
@@ -301,7 +299,7 @@
 				<version>3.2.0-release</version>
 				<configuration>
 					<api>JPA</api>
-					<persistenceUnitName>datanucleus-test-pu</persistenceUnitName>
+					<persistenceUnitName>datanucleus-pu</persistenceUnitName>
 					<log4jConfiguration>${basedir}/log4j.properties</log4jConfiguration>
 					<verbose>true</verbose>
 				</configuration>

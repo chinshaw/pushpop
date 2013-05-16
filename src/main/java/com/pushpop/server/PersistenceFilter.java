@@ -17,43 +17,42 @@ import com.pushpop.server.dao.PersistenceManagerFactory;
 import com.pushpop.server.dao.ThreadLocalPersistenceManager;
 
 public class PersistenceFilter implements Filter {
-    protected static final Logger logger = Logger.getLogger(PersistenceFilter.class.getName());
-    
-    private static EntityManagerFactory entityManagerFactory = null;
+	protected static final Logger logger = Logger
+			.getLogger(PersistenceFilter.class.getName());
 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-        entityManagerFactory = PersistenceManagerFactory.getEntityManagerFactory();
-    }
+	private static EntityManagerFactory entityManagerFactory = null;
 
-    @Override
-    public void destroy() {
-        ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
-        entityManagerFactory.close();
-        ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
-    }
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		entityManagerFactory = PersistenceManagerFactory
+				.getEntityManagerFactory();
+	}
 
-    @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        EntityManager em = null;
-        
-        try {
-            em = entityManagerFactory.createEntityManager();
-            ThreadLocalPersistenceManager.setThreadLocakEntityManager(em);
-            chain.doFilter(req, res);
-            
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().commit();
-            }
-        } catch (Exception e) {
-            System.out.println("GOT AN ERROR WHEN PROCESSING REQUEST");
-            logger.log(Level.SEVERE, "Throwable caught in persistence filter ", e);
-        } finally {
-            ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
-            if (em != null && em.isOpen()) {
-                em.close();
-            }
-        }
-    }
+	@Override
+	public void destroy() {
+		ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
+		entityManagerFactory.close();
+		ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
+	}
+
+	@Override
+	public void doFilter(ServletRequest req, ServletResponse res,
+			FilterChain chain) throws IOException, ServletException {
+		EntityManager em = null;
+
+		try {
+			em = entityManagerFactory.createEntityManager();
+			ThreadLocalPersistenceManager.setThreadLocakEntityManager(em);
+			chain.doFilter(req, res);
+
+			if (em.getTransaction().isActive()) {
+				em.getTransaction().commit();
+			}
+		} finally {
+			ThreadLocalPersistenceManager.removeThreadLocalEntityManager();
+			if (em != null && em.isOpen()) {
+				em.close();
+			}
+		}
+	}
 }
-

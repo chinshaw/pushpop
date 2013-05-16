@@ -1,13 +1,12 @@
 package com.pushpop.server.service;
 
-import com.pushpop.server.ISecurity;
-import com.pushpop.server.SecurityFactory;
 import com.pushpop.server.domain.Person;
+import com.pushpop.server.security.ISecurity;
+import com.pushpop.server.security.SecurityFactory;
 import com.pushpop.shared.AuthenticationException;
 
 
 public class AuthenticationService {
-
 
     private static ISecurity securityProvider = SecurityFactory.getSecurity();
     

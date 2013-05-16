@@ -14,6 +14,7 @@ import com.pushpop.client.view.IQuestionView;
 import com.pushpop.client.view.IQuestionsView;
 import com.pushpop.client.view.IUsersView;
 import com.pushpop.client.view.desktop.MasterLayoutPanel;
+import com.pushpop.client.view.resources.Resources;
 
 public interface IClientFactory {
 
@@ -49,5 +50,7 @@ public interface IClientFactory {
 	public abstract IAuthenticationView getAuthenticationView();
 
 	public abstract IQuestionView getQuestionView();
+	
+	public abstract Resources getResources();
 
 }

@@ -16,7 +16,8 @@ public class PushPopRequestFactoryServlet extends RequestFactoryServlet {
 
         @Override
         public ServerFailure createServerFailure(Throwable throwable) {
-            throwable.printStackTrace();
+            System.out.println("Unabelt to execute request ");
+        	throwable.printStackTrace();
             
             return new ServerFailure("Server Error: "
                     + (throwable == null ? null : throwable.getMessage()),
@@ -41,5 +42,4 @@ public class PushPopRequestFactoryServlet extends RequestFactoryServlet {
     public PushPopRequestFactoryServlet( ServiceLayerDecorator... serviceDecorators) {
         super(new ServletExceptionHandler(), serviceDecorators);
     }
-    
 }

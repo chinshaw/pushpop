@@ -12,7 +12,9 @@ public class PlaceUtils {
 
         for (int i = 0; i < parameterPairs.length; i++) {
             String[] nameAndValue = parameterPairs[i].split("=");
-            parameterMap.put(nameAndValue[0], nameAndValue[1]);
+            if (nameAndValue != null && nameAndValue[0] != null && nameAndValue[1] != null) {
+            	parameterMap.put(nameAndValue[0], nameAndValue[1]);	
+            }
         }
         return parameterMap;
     }

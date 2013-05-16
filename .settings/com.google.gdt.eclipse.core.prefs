@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+lastWarOutDir=/Users/chinshaw/devel/workspace/PushPop/target/pushpop-0.0.1-SNAPSHOT
+launchConfigExternalUrlPrefix=http\://localhost\:8080/pushpop
+warSrcDir=src/main/webapp
+warSrcDirIsOutput=false

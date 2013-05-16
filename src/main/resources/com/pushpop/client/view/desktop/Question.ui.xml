@@ -30,7 +30,7 @@
 										<a
 											title="This question shows research effort; it is useful and clear (click again to undo)"
 											class="vote-up-off">up vote</a>
-										<span class="vote-count-post ">0</span>
+										<span class="vote-count-post" ui:field="voteCount">0</span>
 										<a
 											title="This question does not show any research effort; it is unclear or not useful (click again to undo)"
 											class="vote-down-off">down vote</a>

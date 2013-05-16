@@ -34,6 +34,10 @@ public class MasterLayoutPanel extends Composite {
         dockPanel.addNorth(headerPanel, 120);
        // dockPanel.addSouth(footerPanel, 140);
         dockPanel.add(contentPanel);
+        
+        
+        // HACK to fix overfow
+        dockPanel.getWidgetContainerElement(contentPanel).addClassName(resources.style().overflowhack());
     }
 
     public SimpleLayoutPanel getHeaderPanel() {

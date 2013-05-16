@@ -16,7 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.validation.constraints.NotNull;
 
-import com.pushpop.server.SecurityFactory;
+import com.pushpop.server.security.SecurityFactory;
 import com.pushpop.shared.QuestionStatus;
 
 @Entity
@@ -172,7 +172,6 @@ public class Question extends DatastoreObject implements IHasVotes {
     
     @PrePersist
     private void updateTimeStamps() {
-        System.out.println("CALLING UPDATE TIME STAMPS");
         if (isNew()) {
             this.openedTimeStamp = new Date();
             

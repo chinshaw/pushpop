@@ -1,7 +1,6 @@
 package com.pushpop.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.shared.GWT;
 import com.google.gwt.dom.client.StyleInjector;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
@@ -15,42 +14,45 @@ import com.pushpop.client.view.desktop.MasterLayoutPanel;
 import com.pushpop.client.view.resources.ResourcesFactory;
 
 public class PushPop implements EntryPoint {
-    private IClientFactory clientFactory;
+    private IClientFactory clientFactory = IClientFactory.INSTANCE;;
 
     private MasterLayoutPanel masterLayoutPanel;
+    
+    final PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(clientFactory.getPlaceHistoryMapper());
 
     @Override
     public void onModuleLoad() {
-        clientFactory = IClientFactory.INSTANCE;
         masterLayoutPanel = clientFactory.getMasterLayoutPanel();
 
         RootLayoutPanel.get().add(masterLayoutPanel);
+        RootLayoutPanel.get().setStyleName(clientFactory.getResources().style().root());
 
         StyleInjector.inject(ResourcesFactory.getResources().style().getText());
 
-        PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(clientFactory.getPlaceHistoryMapper());
+
         PlaceController placeController = clientFactory.getPlaceController();
 
         // Start PlaceHistoryHandler with our PlaceHistoryMapper
         historyHandler.register(placeController, clientFactory.getEventBus(), new QuestionsPlace());
-        historyHandler.handleCurrentHistory();
+
 
         // We don't have access to the JSESSIONID so we will just ask the server
         // if there is a valid user.
-        checkForValidSession();
+        start();
     }
     
-    private void checkForValidSession() {
+    private void start() {
         clientFactory.permissionsRequestFactory().createAuthenticationRequest().getCurrentPersionFromSession().fire(new Receiver<PersonProxy>() {
 
             @Override
             public void onSuccess(PersonProxy response) {
                 clientFactory.setCurrentPerson(response);
                 clientFactory.getEventBus().fireEvent(new AuthenticationEvent(response));
+                historyHandler.handleCurrentHistory();
             }
 
             public void onFailure(ServerFailure failure) {
-                GWT.log("No valid sesion yet");
+                historyHandler.handleCurrentHistory();
             }
         });
     }

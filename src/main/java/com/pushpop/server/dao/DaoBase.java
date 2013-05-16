@@ -14,12 +14,17 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import com.pushpop.server.domain.IDatastoreObject;
+import com.pushpop.server.domain.Person;
+import com.pushpop.server.security.ISecurity;
+import com.pushpop.server.security.SecurityFactory;
 import com.pushpop.shared.PushPopException;
 
 
 public class DaoBase<T extends IDatastoreObject> {
 
     private final Logger logger = Logger.getLogger(DaoBase.class.getName());
+    
+    private static final ISecurity security = SecurityFactory.getSecurity();
 
     protected Class<T> clazz;
 
@@ -304,5 +309,16 @@ public class DaoBase<T extends IDatastoreObject> {
 
     protected static EntityManager getEntityManager() {
         return ThreadLocalPersistenceManager.getEntityManager();
+    }
+    
+    
+    /**
+     * Helper method that will expose the current authenticated
+     * user. This is the user that is authenticated and has a valid 
+     * session for this thread. 
+     * @return
+     */
+    public Person currentUser() {
+    	return security.getCurrentPerson();
     }
 }
