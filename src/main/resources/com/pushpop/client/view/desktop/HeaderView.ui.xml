@@ -72,19 +72,19 @@
 			<div class="nav mainnavs">
 				<ul>
 					<li>
-						<a href="#questions">Questions</a>
+						<a href="#QuestionsPlace:">Questions</a>
 					</li>
 					<li>
-						<a href="#tags">Tags</a>
+						<a href="#TagsPlace:">Tags</a>
 					</li>
 					<li class="youarehere">
-						<a href="/users" id="nav-users">Users</a>
+						<a href="#UsersPlace:" id="nav-users">Users</a>
 					</li>
 					<li>
-						<a href="#badges">Badges</a>
+						<a href="#BadgesPlace:">Badges</a>
 					</li>
 					<li>
-						<a href="#unanswered">Unanswered</a>
+						<a href="#UnansweredPlace:">Unanswered</a>
 					</li>
 				</ul>
 			</div>

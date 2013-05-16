@@ -1,4 +1,4 @@
-package com.pushpop.server;
+package com.pushpop.server.security;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -6,9 +6,9 @@ import java.util.concurrent.Executors;
 
 import javax.servlet.http.HttpSession;
 
-import com.pushpop.server.IAuthenticationProvider.AuthenticationCallback;
 import com.pushpop.server.dao.PersonDao;
 import com.pushpop.server.domain.Person;
+import com.pushpop.server.security.IAuthenticationProvider.AuthenticationCallback;
 import com.pushpop.server.utils.HttpSessionUtils;
 import com.pushpop.shared.AuthenticationException;
 import com.pushpop.shared.AuthenticationProviderException;

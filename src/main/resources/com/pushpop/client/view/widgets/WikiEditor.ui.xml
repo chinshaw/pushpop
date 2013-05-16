@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:ppw="urn:import:com.pushpop.client.view.widgets">
+
+	<ui:with field='images'
+		type='com.pushpop.client.view.widgets.WikiEditor.Images' />
+
+	<ui:style>
+
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div style="display:block">
+			<g:Image resource="{images.bold}" ui:field="bold"></g:Image>
+			<g:Image resource="{images.italic}" ui:field="italic"></g:Image>
+			<g:Image resource="{images.insertImage}" ui:field="insertImage"></g:Image>
+		</div>
+		<div class="post-editor" id="post-editor">
+
+			<div style="position: relative;">
+				<div class="wmd-container">
+					<g:TextArea styleName="wmd-input processed" ui:field="wikiText">
+					</g:TextArea>
+				</div>
+			</div>
+
+			<ppw:WikiTextViewer ui:field="wikiTextViewer"></ppw:WikiTextViewer>
+		</div>
+
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

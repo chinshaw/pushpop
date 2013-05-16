@@ -144,9 +144,14 @@ public class ClientFactoryDesktop implements IClientFactory {
     public PermissionsRequestFactory permissionsRequestFactory() {
         return permissionsRequestFactory;
     }
+    
     @Override
     public IQuestionView getQuestionView() {
         return questionView;
+    }
+    
+    public Resources getResources() {
+    	return resources;
     }
 
 }

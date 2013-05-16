@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package com.pushpop.server;
+package com.pushpop.server.security;
 
 import java.net.URL;
 import java.util.Hashtable;
@@ -14,7 +14,7 @@ import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 
-import com.pushpop.server.IAuthenticationProvider;
+import com.pushpop.server.security.IAuthenticationProvider;
 import com.pushpop.server.utils.LdapQuery;
 import com.pushpop.server.utils.ServerProperties;
 import com.pushpop.shared.AuthenticationException;

@@ -1,4 +1,4 @@
-package com.pushpop.server;
+package com.pushpop.server.security;
 
 import com.pushpop.shared.AuthenticationException;
 import com.pushpop.shared.AuthenticationProviderException;

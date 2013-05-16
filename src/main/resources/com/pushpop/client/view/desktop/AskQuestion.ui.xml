@@ -33,34 +33,9 @@
 					</div>
 				</div>
 
-				<div class="post-editor" id="post-editor">
-
-					<div style="position: relative;">
-						<div class="wmd-container">
-							<g:TextArea styleName="wmd-input processed" ui:field="description" >
-							</g:TextArea>
-							<div class="grippie" style="margin-right: 0px;"></div>
-						</div>
-					</div>
-
-					<div style="margin-top: 8px; height:24px;" class="fl">&nbsp;</div>
-					<div style="margin-top: 8px; height:24px; display:none;" class="draft-saved community-option fl"
-						id="draft-saved">draft saved</div>
-
-					<div style="margin-top: 8px; height:24px; display:none;" class="draft-discarded community-option fl"
-						id="draft-discarded">draft discarded</div>
-
-					<div class="wmd-preview" id="wmd-preview"></div>
-					<div></div>
-					<div class="edit-block">
-						<input type="hidden" value="99991d17c79ea3b0f7c72bd5cc4932c3"
-							name="fkey" id="fkey" />
-						<input type="text" name="author" id="author" />
-					</div>
-				</div>
-
+				<ppw:WikiEditor ui:field="wikiEditor" />
+								
 				<div style="position: relative;">
-
 
 					<div style="position: relative;">
 						<div class="form-item">
@@ -111,8 +86,6 @@
 			</div>
 			<div class="dno" id="question-answer-section">
 				<div style="margin-bottom: 20px;" id="inline-answer">
-
-
 
 					<div class="post-editor" id="post-editor-42">
 

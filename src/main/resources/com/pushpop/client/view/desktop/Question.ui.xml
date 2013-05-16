@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:ppw="urn:import:com.pushpop.client.view.widgets">
 	
 	<ui:style>
 		.title {
@@ -14,8 +15,7 @@
 		<div id="content">
 			<div id="question-header">
 				<h1 itemprop="name">
-					<a class="question-hyperlink"
-						href="/questions/16254562/persist-data-for-10-entities-takes-12-sec">Persist data for 10 entities takes 12 sec</a>
+					<a class="question-hyperlink" ui:field="questionTitle"></a>
 				</h1>
 			</div>
 
@@ -30,7 +30,7 @@
 										<a
 											title="This question shows research effort; it is useful and clear (click again to undo)"
 											class="vote-up-off">up vote</a>
-										<span class="vote-count-post ">0</span>
+										<span class="vote-count-post" ui:field="voteCount">0</span>
 										<a
 											title="This question does not show any research effort; it is unclear or not useful (click again to undo)"
 											class="vote-down-off">down vote</a>
@@ -46,40 +46,8 @@
 
 								<td class="postcell">
 									<div>
-										<div itemprop="description" class="post-text">
-											<p>
-												Im using eclipse link with derby DB or MaxDB,when I did
-												performace testing to persist data for 10 entities with 1000
-												record each this take 12.9 sec ,my code take 0.9 and the
-												<strong>commit</strong>
-												of the entity manager using JPA takes about 12 sec .
-											</p>
-
-											<p>1.is it OK that for 10,000 records the time will be 12
-												secondes?</p>
-
-											<p>2.I read that there is option use </p>
-
-											<pre class="lang-java prettyprint prettyprinted" style="">
-												<code>
-													<span class="pun">&lt;</span>
-													<span class="pln">property name</span>
-													<span class="pun">=</span>
-													<span class="str">"eclipselink.jdbc.batch-writing"</span>
-													<span class="pln"> value</span>
-													<span class="pun">=</span>
-													<span class="str">"JDBC"</span>
-													<span class="pln">
-													</span>
-													<span class="pun">/&gt;</span>
-												</code>
-											</pre>
-
-											<p>what is the drawback of using it?how the logging is work?</p>
-
-											<p>3.what about using Thread for the commit is it OK?</p>
-
-										</div>
+									    <ppw:WikiTextViewer styleName="post-text" ui:field="questionDescription"></ppw:WikiTextViewer>
+									    
 										<div class="post-taglist">
 											<a rel="tag" title="show questions tagged 'java'" class="post-tag"
 												href="/questions/tagged/java">java</a>
@@ -199,90 +167,11 @@
 
 
 
-						<script type="text/javascript">
-							StackExchange.ready(function() {
-							initTagRenderer("".split(" "), "".split(" "));
-
-							prepareEditor({
-							heartbeatType: 'answer',
-							bindNavPrevention: true,
-							postfix: "",
-							onDemand: false,
-							discardSelector: ".discard-answer"
-
-							});
-
-
-							});
-						</script>
-
-
 						<div class="post-editor" id="post-editor">
 
 							<div style="position: relative;">
 								<div class="wmd-container">
-									<div class="wmd-button-bar" id="wmd-button-bar">
-										<ul id="wmd-button-row" class="wmd-button-row">
-											<li class="wmd-button" style="left: 0px;" id="wmd-bold-button"
-												title="Strong &lt;strong&gt; Ctrl+B">
-												<span style="background-position: 0px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 25px;" id="wmd-italic-button"
-												title="Emphasis &lt;em&gt; Ctrl+I">
-												<span style="background-position: -20px 0px;"></span>
-											</li>
-											<li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li>
-											<li class="wmd-button" style="left: 75px;" id="wmd-link-button"
-												title="Hyperlink &lt;a&gt; Ctrl+L">
-												<span style="background-position: -40px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 100px;" id="wmd-quote-button"
-												title="Blockquote &lt;blockquote&gt; Ctrl+Q">
-												<span style="background-position: -60px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 125px;" id="wmd-code-button"
-												title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K">
-												<span style="background-position: -80px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 150px;" id="wmd-image-button"
-												title="Image &lt;img&gt; Ctrl+G">
-												<span style="background-position: -100px 0px;"></span>
-											</li>
-											<li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li>
-											<li class="wmd-button" style="left: 200px;" id="wmd-olist-button"
-												title="Numbered List &lt;ol&gt; Ctrl+O">
-												<span style="background-position: -120px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 225px;" id="wmd-ulist-button"
-												title="Bulleted List &lt;ul&gt; Ctrl+U">
-												<span style="background-position: -140px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 250px;" id="wmd-heading-button"
-												title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H">
-												<span style="background-position: -160px 0px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 275px;" id="wmd-hr-button"
-												title="Horizontal Rule &lt;hr&gt; Ctrl+R">
-												<span style="background-position: -180px 0px;"></span>
-											</li>
-											<li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li>
-											<li class="wmd-button" style="left: 325px;" id="wmd-undo-button"
-												title="Undo - Ctrl+Z">
-												<span style="background-position: -200px -20px;"></span>
-											</li>
-											<li class="wmd-button" style="left: 350px;" id="wmd-redo-button"
-												title="Redo - Ctrl+Shift+Z">
-												<span style="background-position: -220px -20px;"></span>
-											</li>
-											<li class="wmd-button wmd-help-button" id="wmd-help-button"
-												style="right: 0px;" title="Markdown Editing Help">
-												<span style="background-position: -240px 0px;"></span>
-											</li>
-										</ul>
-									</div>
-									<textarea data-min-length="" tabindex="101" rows="15"
-										cols="92" name="post-text" class="wmd-input processed" id="wmd-input"></textarea>
-									<div class="grippie" style="margin-right: 0px;"></div>
+									<ppw:WikiEditor ui:field="answerEditor" />
 								</div>
 							</div>
 

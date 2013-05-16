@@ -9,4 +9,9 @@ public interface IQuestionView extends IView, Editor<QuestionProxy> {
         
     }
     
+    public abstract void setQuestionTitle(String title);
+    
+    public abstract void setQuestionDescription(String description);
+
+	public abstract void setQuestionVotesCount(Integer votesCount);
 }
